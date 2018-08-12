@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Super Mario Bros (NES) Music - Castle Theme.ogg-7c53caaad5472c9c112bdb7d56541ddf.oggstr"
+
+[deps]
+
+source_file="res://sounds/SuperMarioBrosNESMusicOgg/Super Mario Bros (NES) Music - Castle Theme.ogg"
+dest_files=[ "res://.import/Super Mario Bros (NES) Music - Castle Theme.ogg-7c53caaad5472c9c112bdb7d56541ddf.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

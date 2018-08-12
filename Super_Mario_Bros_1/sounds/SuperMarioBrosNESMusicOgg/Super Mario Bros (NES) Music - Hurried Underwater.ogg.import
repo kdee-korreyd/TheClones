@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Super Mario Bros (NES) Music - Hurried Underwater.ogg-2c114a094cd9f156e9205e3b3efc31b9.oggstr"
+
+[deps]
+
+source_file="res://sounds/SuperMarioBrosNESMusicOgg/Super Mario Bros (NES) Music - Hurried Underwater.ogg"
+dest_files=[ "res://.import/Super Mario Bros (NES) Music - Hurried Underwater.ogg-2c114a094cd9f156e9205e3b3efc31b9.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

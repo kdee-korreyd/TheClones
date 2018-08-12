@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/smb_mariodie.wav-f361b642a462d9e0e591d422792bb6bf.sample"
+
+[deps]
+
+source_file="res://sounds/smb_mariodie.wav"
+dest_files=[ "res://.import/smb_mariodie.wav-f361b642a462d9e0e591d422792bb6bf.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

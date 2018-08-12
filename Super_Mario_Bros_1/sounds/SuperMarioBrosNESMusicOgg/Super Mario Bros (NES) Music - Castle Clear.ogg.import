@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Super Mario Bros (NES) Music - Castle Clear.ogg-0f134c21a2ce19ee568b5aa138a2b790.oggstr"
+
+[deps]
+
+source_file="res://sounds/SuperMarioBrosNESMusicOgg/Super Mario Bros (NES) Music - Castle Clear.ogg"
+dest_files=[ "res://.import/Super Mario Bros (NES) Music - Castle Clear.ogg-0f134c21a2ce19ee568b5aa138a2b790.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

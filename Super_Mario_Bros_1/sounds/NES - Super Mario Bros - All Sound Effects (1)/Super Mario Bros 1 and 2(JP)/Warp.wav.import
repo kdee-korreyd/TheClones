@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Warp.wav-a8024c997ab21a0556960e56c11db730.sample"
+
+[deps]
+
+source_file="res://sounds/NES - Super Mario Bros - All Sound Effects (1)/Super Mario Bros 1 and 2(JP)/Warp.wav"
+dest_files=[ "res://.import/Warp.wav-a8024c997ab21a0556960e56c11db730.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Super Mario Bros (NES) Music - Going Underground.ogg-0f908154cdc6dac9fb60c3cc141d35b5.oggstr"
+
+[deps]
+
+source_file="res://sounds/SuperMarioBrosNESMusicOgg/Super Mario Bros (NES) Music - Going Underground.ogg"
+dest_files=[ "res://.import/Super Mario Bros (NES) Music - Going Underground.ogg-0f908154cdc6dac9fb60c3cc141d35b5.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

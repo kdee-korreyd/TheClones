@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/1up.wav-cc3c0c3f9b694c10c5faeb326f1b62e3.sample"
+
+[deps]
+
+source_file="res://sounds/NES - Super Mario Bros - All Sound Effects (1)/Super Mario Bros 1 and 2(JP)/1up.wav"
+dest_files=[ "res://.import/1up.wav-cc3c0c3f9b694c10c5faeb326f1b62e3.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

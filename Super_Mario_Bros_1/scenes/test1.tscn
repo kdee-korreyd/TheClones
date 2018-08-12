@@ -1,43 +1,538 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=21 format=2]
 
-[ext_resource path="res://scenes/KBMario.tscn" type="PackedScene" id=1]
-[ext_resource path="res://images/images.png" type="Texture" id=2]
+[ext_resource path="res://scenes/test1.gd" type="Script" id=1]
+[ext_resource path="res://images/1519618183035.png" type="Texture" id=2]
+[ext_resource path="res://images/Princess_Daisy_Grudge_Match.png" type="Texture" id=3]
+[ext_resource path="res://images/logo-mario.png" type="Texture" id=4]
+[ext_resource path="res://images/vebCEZw.png" type="Texture" id=5]
+[ext_resource path="res://images/bg-1-1-noblocks-transparent.png" type="Texture" id=6]
+[ext_resource path="res://scenes/KBMario.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/QuestionMarks.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/Bricks.tscn" type="PackedScene" id=9]
+[ext_resource path="res://sounds/super_bump.wav" type="AudioStream" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 100.49, 31.1111 )
+extents = Vector2( 2621, 31.1111 )
+_sections_unfolded = [ "Resource" ]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 569, 30 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 2430, 53 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 2159, 54 )
+
+[sub_resource type="RectangleShape2D" id=5]
+
+custom_solver_bias = 0.0
+extents = Vector2( 68, 39 )
+_sections_unfolded = [ "Resource" ]
+
+[sub_resource type="RectangleShape2D" id=6]
+
+custom_solver_bias = 0.0
+extents = Vector2( 77, 36 )
+
+[sub_resource type="RectangleShape2D" id=7]
+
+custom_solver_bias = 0.0
+extents = Vector2( 68, 76 )
+
+[sub_resource type="RectangleShape2D" id=8]
+
+custom_solver_bias = 0.0
+extents = Vector2( 68, 114 )
+
+[sub_resource type="RectangleShape2D" id=9]
+
+custom_solver_bias = 0.0
+extents = Vector2( 38, 38 )
+
+[sub_resource type="RectangleShape2D" id=10]
+
+custom_solver_bias = 0.0
+extents = Vector2( 19, 17 )
 
 [node name="Node2D" type="Node2D" index="0"]
 
-[node name="KBMario" parent="." index="0" instance=ExtResource( 1 )]
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
-position = Vector2( 695, 200 )
+[node name="BackgroundColorRect" type="ColorRect" parent="." index="0"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = -568.0
+margin_right = 17033.0
+margin_bottom = 2206.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0.419608, 0.54902, 1, 1 )
+
+[node name="Mario_png" type="Sprite" parent="BackgroundColorRect" index="0"]
+
+position = Vector2( 7039, 798 )
+texture = ExtResource( 2 )
+
+[node name="Princess_Daisy_Grudge_Match" type="Sprite" parent="BackgroundColorRect" index="1"]
+
+position = Vector2( 6241, 798 )
+texture = ExtResource( 3 )
+
+[node name="logo-mario" type="Sprite" parent="BackgroundColorRect" index="2"]
+
+position = Vector2( 4911, 876 )
+texture = ExtResource( 4 )
+
+[node name="vebCEZw" type="Sprite" parent="BackgroundColorRect" index="3"]
+
+position = Vector2( 12777, 1140 )
+texture = ExtResource( 5 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="1"]
 
+editor/display_folded = true
 position = Vector2( 1050, 880 )
-scale = Vector2( 21.0469, 1.125 )
 input_pickable = false
-collision_layer = 1
+collision_layer = 0
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-_sections_unfolded = [ "Material", "Transform", "Z Index" ]
+_sections_unfolded = [ "Collision", "Material", "Transform", "Z Index" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0"]
+[node name="bg-1-1" type="Sprite" parent="StaticBody2D" index="0"]
 
-position = Vector2( 82.4349, 48.8889 )
+position = Vector2( 7017, 216 )
+scale = Vector2( 4.75438, 4.75438 )
+texture = ExtResource( 6 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="1"]
+
+position = Vector2( 1580, 104 )
 shape = SubResource( 1 )
-_sections_unfolded = [ "Transform", "Z Index" ]
+_sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
-[node name="images" type="Sprite" parent="StaticBody2D" index="1"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" index="2"]
 
-position = Vector2( 15.6793, 48.8889 )
-scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 2 )
-_sections_unfolded = [ "Offset", "Transform" ]
+position = Vector2( 4924, 104 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" index="3"]
+
+position = Vector2( 8155, 127 )
+shape = SubResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" index="4"]
+
+position = Vector2( 12905, 129 )
+shape = SubResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" index="5"]
+
+position = Vector2( 1160, 33 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D" index="6"]
+
+position = Vector2( 3365, 33 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D" index="7"]
+
+position = Vector2( 3365, -45 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="StaticBody2D" index="8"]
+
+position = Vector2( 3365, -123 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="StaticBody2D" index="9"]
+
+position = Vector2( 11428, 30 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="StaticBody2D" index="10"]
+
+position = Vector2( 12645, 30 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D" index="11"]
+
+position = Vector2( 1160, -43 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D" index="12"]
+
+position = Vector2( 1920, -121 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D" index="13"]
+
+position = Vector2( 2529, -195 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="StaticBody2D" index="14"]
+
+position = Vector2( 3366, -196 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="StaticBody2D" index="15"]
+
+position = Vector2( 11429, -43 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="StaticBody2D" index="16"]
+
+position = Vector2( 12646, -43 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" index="17"]
+
+position = Vector2( 1920, -6 )
+shape = SubResource( 7 )
+_sections_unfolded = [ "Material" ]
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D" index="18"]
+
+position = Vector2( 2529, -44 )
+shape = SubResource( 8 )
+_sections_unfolded = [ "Material" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" index="19"]
+
+position = Vector2( 3, 0 )
+build_mode = 0
+polygon = PoolVector2Array( 9143, 72, 9143, -4, 9219, -4, 9219, -80, 9295, -80, 9295, -156, 9371, -156, 9371, -232, 9447, -232, 9447, 72 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D" index="20"]
+
+position = Vector2( 1066, 0 )
+build_mode = 0
+polygon = PoolVector2Array( 9143, 72, 9143, -4, 9219, -4, 9219, -80, 9295, -80, 9295, -156, 9371, -156, 9371, -232, 9447, -232, 9447, 72 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D" index="21"]
+
+position = Vector2( 4, 0 )
+build_mode = 0
+polygon = PoolVector2Array( 9599, 72, 9599, -232, 9675, -232, 9675, -156, 9751, -156, 9751, -80, 9827, -80, 9827, -4, 9903, -4, 9903, 72 )
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="StaticBody2D" index="22"]
+
+position = Vector2( 1145, 0 )
+build_mode = 0
+polygon = PoolVector2Array( 9599, 72, 9599, -232, 9675, -232, 9675, -156, 9751, -156, 9751, -80, 9827, -80, 9827, -4, 9903, -4, 9903, 72 )
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="StaticBody2D" index="23"]
+
+position = Vector2( 2, 0 )
+build_mode = 0
+polygon = PoolVector2Array( 10511, -232, 10587, -232, 10587, 72, 10511, 72 )
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="StaticBody2D" index="24"]
+
+position = Vector2( 7, 0 )
+build_mode = 0
+polygon = PoolVector2Array( 12715, 72, 12715, -4, 12791, -4, 12791, -80, 12867, -80, 12867, -156, 12943, -156, 12943, -232, 13019, -232, 13019, -308, 13095, -308, 13095, -384, 13171, -384, 13171, -460, 13247, -460, 13247, -536, 13399, -536, 13399, 72 )
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="StaticBody2D" index="25"]
+
+position = Vector2( 14053, 34 )
+shape = SubResource( 9 )
+
+[node name="KBMario" parent="." index="2" instance=ExtResource( 7 )]
+
+position = Vector2( 352, 794 )
+collision_layer = 3
+collision_mask = 0
+
+[node name="QuestionMark" parent="." index="3" instance=ExtResource( 8 )]
+
+position = Vector2( 1715, 384 )
+scale = Vector2( 1.21875, 1.1875 )
+_sections_unfolded = [ "Collision", "Pickable", "Visibility" ]
+
+[node name="QuestionMark5" parent="." index="4" instance=ExtResource( 8 )]
+
+position = Vector2( 5975, 687 )
+scale = Vector2( 1.21875, 1.1875 )
+_sections_unfolded = [ "Collision", "Pickable", "Visibility" ]
+
+[node name="QuestionMark6" parent="." index="5" instance=ExtResource( 8 )]
+
+position = Vector2( 7192, 382 )
+scale = Vector2( 1.21875, 1.1875 )
+_sections_unfolded = [ "Collision", "Pickable", "Visibility" ]
+
+[node name="QuestionMark7" parent="." index="6" instance=ExtResource( 8 )]
+
+position = Vector2( 8103, 686 )
+scale = Vector2( 1.21875, 1.1875 )
+_sections_unfolded = [ "Collision", "Pickable", "Visibility" ]
+
+[node name="QuestionMark8" parent="." index="7" instance=ExtResource( 8 )]
+
+position = Vector2( 8331, 686 )
+scale = Vector2( 1.21875, 1.1875 )
+_sections_unfolded = [ "Collision", "Pickable", "Visibility" ]
+
+[node name="QuestionMark9" parent="." index="8" instance=ExtResource( 8 )]
+
+position = Vector2( 8331, 382 )
+scale = Vector2( 1.21875, 1.1875 )
+_sections_unfolded = [ "Collision", "Pickable", "Visibility" ]
+
+[node name="QuestionMark10" parent="." index="9" instance=ExtResource( 8 )]
+
+position = Vector2( 8559, 686 )
+scale = Vector2( 1.21875, 1.1875 )
+_sections_unfolded = [ "Collision", "Pickable", "Visibility" ]
+
+[node name="QuestionMark11" parent="." index="10" instance=ExtResource( 8 )]
+
+position = Vector2( 9855, 382 )
+scale = Vector2( 1.21875, 1.1875 )
+_sections_unfolded = [ "Collision", "Pickable", "Visibility" ]
+
+[node name="QuestionMark13" parent="." index="11" instance=ExtResource( 8 )]
+
+position = Vector2( 12973, 686 )
+scale = Vector2( 1.21875, 1.1875 )
+_sections_unfolded = [ "Collision", "Pickable", "Visibility" ]
+
+[node name="QuestionMark12" parent="." index="12" instance=ExtResource( 8 )]
+
+position = Vector2( 9931, 382 )
+scale = Vector2( 1.21875, 1.1875 )
+_sections_unfolded = [ "Collision", "Pickable", "Visibility" ]
+
+[node name="QuestionMark2" parent="." index="13" instance=ExtResource( 8 )]
+
+position = Vector2( 1259, 687 )
+scale = Vector2( 1.21875, 1.1875 )
+_sections_unfolded = [ "Collision", "Pickable", "Transform", "Visibility" ]
+
+[node name="QuestionMark3" parent="." index="14" instance=ExtResource( 8 )]
+
+position = Vector2( 1791, 687 )
+scale = Vector2( 1.21875, 1.1875 )
+_sections_unfolded = [ "Collision", "Pickable", "Visibility" ]
+
+[node name="QuestionMark4" parent="." index="15" instance=ExtResource( 8 )]
+
+position = Vector2( 1637, 687 )
+scale = Vector2( 1.21875, 1.1875 )
+_sections_unfolded = [ "Collision", "Pickable", "Visibility" ]
+
+[node name="Bricks2" parent="." index="16" instance=ExtResource( 9 )]
+
+position = Vector2( 1560, 687 )
+
+[node name="Bricks33" parent="." index="17" instance=ExtResource( 9 )]
+
+position = Vector2( 921, 686 )
+
+[node name="Bricks34" parent="." index="18" instance=ExtResource( 9 )]
+
+position = Vector2( 997, 686 )
+
+[node name="Bricks35" parent="." index="19" instance=ExtResource( 9 )]
+
+position = Vector2( 1073, 686 )
+
+[node name="Bricks36" parent="." index="20" instance=ExtResource( 9 )]
+
+position = Vector2( 1149, 686 )
+
+[node name="Bricks3" parent="." index="21" instance=ExtResource( 9 )]
+
+position = Vector2( 1714, 687 )
+
+[node name="Bricks4" parent="." index="22" instance=ExtResource( 9 )]
+
+position = Vector2( 1868, 687 )
+
+[node name="Bricks5" parent="." index="23" instance=ExtResource( 9 )]
+
+position = Vector2( 5898, 687 )
+
+[node name="Bricks6" parent="." index="24" instance=ExtResource( 9 )]
+
+position = Vector2( 6052, 687 )
+
+[node name="Bricks7" parent="." index="25" instance=ExtResource( 9 )]
+
+position = Vector2( 6127, 382 )
+
+[node name="Bricks12" parent="." index="26" instance=ExtResource( 9 )]
+
+position = Vector2( 6431, 382 )
+
+[node name="Bricks10" parent="." index="27" instance=ExtResource( 9 )]
+
+position = Vector2( 6279, 382 )
+
+[node name="Bricks14" parent="." index="28" instance=ExtResource( 9 )]
+
+position = Vector2( 6583, 382 )
+
+[node name="Bricks17" parent="." index="29" instance=ExtResource( 9 )]
+
+position = Vector2( 7039, 382 )
+
+[node name="Bricks8" parent="." index="30" instance=ExtResource( 9 )]
+
+position = Vector2( 6203, 382 )
+
+[node name="Bricks11" parent="." index="31" instance=ExtResource( 9 )]
+
+position = Vector2( 6507, 382 )
+
+[node name="Bricks15" parent="." index="32" instance=ExtResource( 9 )]
+
+position = Vector2( 6963, 382 )
+
+[node name="Bricks9" parent="." index="33" instance=ExtResource( 9 )]
+
+position = Vector2( 6355, 382 )
+
+[node name="Bricks13" parent="." index="34" instance=ExtResource( 9 )]
+
+position = Vector2( 6659, 382 )
+
+[node name="Bricks16" parent="." index="35" instance=ExtResource( 9 )]
+
+position = Vector2( 7115, 382 )
+
+[node name="Bricks18" parent="." index="36" instance=ExtResource( 9 )]
+
+position = Vector2( 7191, 686 )
+
+[node name="Bricks19" parent="." index="37" instance=ExtResource( 9 )]
+
+position = Vector2( 7647, 686 )
+
+[node name="Bricks20" parent="." index="38" instance=ExtResource( 9 )]
+
+position = Vector2( 7723, 686 )
+
+[node name="Bricks21" parent="." index="39" instance=ExtResource( 9 )]
+
+position = Vector2( 9017, 686 )
+
+[node name="Bricks22" parent="." index="40" instance=ExtResource( 9 )]
+
+position = Vector2( 9246, 382 )
+
+[node name="Bricks23" parent="." index="41" instance=ExtResource( 9 )]
+
+position = Vector2( 9322, 382 )
+
+[node name="Bricks27" parent="." index="42" instance=ExtResource( 9 )]
+
+position = Vector2( 9854, 686 )
+
+[node name="Bricks31" parent="." index="43" instance=ExtResource( 9 )]
+
+position = Vector2( 12821, 686 )
+
+[node name="Bricks28" parent="." index="44" instance=ExtResource( 9 )]
+
+position = Vector2( 9779, 382 )
+
+[node name="Bricks24" parent="." index="45" instance=ExtResource( 9 )]
+
+position = Vector2( 9395, 382 )
+
+[node name="Bricks25" parent="." index="46" instance=ExtResource( 9 )]
+
+position = Vector2( 9398, 382 )
+
+[node name="Bricks26" parent="." index="47" instance=ExtResource( 9 )]
+
+position = Vector2( 9930, 686 )
+
+[node name="Bricks30" parent="." index="48" instance=ExtResource( 9 )]
+
+position = Vector2( 12897, 686 )
+
+[node name="Bricks32" parent="." index="49" instance=ExtResource( 9 )]
+
+position = Vector2( 13049, 686 )
+
+[node name="Bricks29" parent="." index="50" instance=ExtResource( 9 )]
+
+position = Vector2( 10007, 382 )
+
+[node name="ColorRect2" type="ColorRect" parent="." index="51"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 5849.0
+margin_top = -102.0
+margin_right = 5925.0
+margin_bottom = -26.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 1, 1, 1, 0.580118 )
+_sections_unfolded = [ "Margin", "Rect", "Visibility" ]
+
+[node name="Area2D" type="Area2D" parent="." index="52"]
+
+position = Vector2( 844, 919 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision", "Material", "Pickable", "Transform", "Visibility" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+
+position = Vector2( -1, 7 )
+shape = SubResource( 10 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Music" type="AudioStreamPlayer" parent="." index="53"]
+
+stream = ExtResource( 10 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Music1"
+
+[connection signal="body_entered" from="Area2D" to="KBMario" method="_on_Area2D_body_entered"]
 
 

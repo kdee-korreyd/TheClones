@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Super Mario Bros (NES) Music - Hurried Going Underground.ogg-6f5fa57deeca248ead6ee6173591c304.oggstr"
+
+[deps]
+
+source_file="res://sounds/SuperMarioBrosNESMusicOgg/Super Mario Bros (NES) Music - Hurried Going Underground.ogg"
+dest_files=[ "res://.import/Super Mario Bros (NES) Music - Hurried Going Underground.ogg-6f5fa57deeca248ead6ee6173591c304.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

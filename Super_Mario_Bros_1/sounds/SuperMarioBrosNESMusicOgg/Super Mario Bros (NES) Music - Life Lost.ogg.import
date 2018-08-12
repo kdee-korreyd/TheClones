@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Super Mario Bros (NES) Music - Life Lost.ogg-7c3be33b3202e5e684502bc7a3d3b065.oggstr"
+
+[deps]
+
+source_file="res://sounds/SuperMarioBrosNESMusicOgg/Super Mario Bros (NES) Music - Life Lost.ogg"
+dest_files=[ "res://.import/Super Mario Bros (NES) Music - Life Lost.ogg-7c3be33b3202e5e684502bc7a3d3b065.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
