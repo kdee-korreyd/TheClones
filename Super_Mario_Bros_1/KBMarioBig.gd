@@ -7,6 +7,8 @@ var collision_shape
 var collision_shape_ducking
 
 func _ready():
+	print("callng MarioBig ready")
+	is_big = true
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
 	collision_shape = preload("res://scenes/KBMarioBigCollisionShape.tres")
@@ -21,6 +23,7 @@ func _ready():
 
 func grow():
 	$"mario-normal-small/AnimationPlayer".play("grow")
+	$AudioGrow.play()
 	
 func shrink():
 	$"mario-normal-small/AnimationPlayer".play_backwards("grow")

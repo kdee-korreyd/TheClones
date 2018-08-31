@@ -1,0 +1,24 @@
+. can hit enemies off screen who are not active yet
+. sometimes smashing brick doesnt stop mario
+. mario should have some down velocity after hitting brick
+. enemies not freed after killing
+. anitmation artifacts on mario
+. flower animation jumps around
+. end of level flag creation/animation
+. sound gets funky when lots of noises playing at onces (and eventually stops
+playing until things calm down
+. jumping too high messes up camera (like out of the top frame)
+. mario scene switching messes up camera (put all marios in 1 scene with a
+consistent camera?)
+. make a print debug function for printing stuff (so its easy to turn things
+off)
+. switching from big mario to flower mario causes camera to FREAK OUT
+. hud
+. start menu
+. koopa troopa
+. star
+. hidden question marks
+. little mario can break bricks
+. mario is invensible 
+. when this is all done. do it all again in a clean way (rough draft code is
+exremely ugly)

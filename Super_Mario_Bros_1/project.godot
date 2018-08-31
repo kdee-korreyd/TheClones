@@ -39,6 +39,8 @@ ui_jump=[ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resourc
  ]
 ui_x=[ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":2,"pressure":0.0,"pressed":false,"script":null)
  ]
+ui_b=[ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":1,"pressure":0.0,"pressed":false,"script":null)
+ ]
 
 [rendering]
 

@@ -1,6 +1,10 @@
 extends StaticBody2D
  
 export (PackedScene) var BrickCoinParticles
+export (PackedScene) var GrowMushroom
+export (PackedScene) var FireFlower
+export (PackedScene) var Star
+export (String) var ContentType
 
 var hit_last_frame = false
 
@@ -28,6 +32,7 @@ func _physics_process(delta):
 	var hits = space_state.intersect_shape(query)
 	
 	for h in hits:
+		#should use groups for this check instead
 		if h.collider.has_node("BreakRayCast2D"):
 			hit = true
 			if not hit_last_frame: 
@@ -42,10 +47,25 @@ func _physics_process(delta):
 					if $QuestionMarkSprite/AnimationPlayer.assigned_animation != "hit":
 						h.collider.can_hit_stuff = false
 						print("test2" + str(h.collider.can_hit_stuff))
-						var coin = BrickCoinParticles.instance()
-						self.add_child(coin)
-						coin.emitting = true
-						coin.get_node("Hit").play()
+						if self.ContentType == "coin":
+							var coin = BrickCoinParticles.instance()
+							self.add_child(coin)
+							coin.emitting = true
+							coin.get_node("Hit").play()
+						elif self.ContentType == "growmushroom":
+							var mushroom = GrowMushroom.instance()
+							#get_node("/root").get_child(0).add_child(mushroom)
+							get_node("/root").get_child(0).get_node("Layer1").add_child(mushroom)
+							mushroom.global_transform = mushroom.global_transform.translated(self.global_position)
+						elif self.ContentType == "fireflower":
+							var flower = FireFlower.instance()
+							get_node("/root").get_child(0).get_node("Layer1").add_child(flower)
+							flower.global_transform = flower.global_transform.translated(self.global_position)
+						elif self.ContentType == "star":
+							var star = Star.instance()
+							get_node("/root").get_child(0).get_node("Layer1").add_child(star)
+							star.global_transform = star.global_transform.translated(self.global_position)
+
 						#self.collision_layer = 0  	#remove collision layer so that adjacent blocks can  be hit without cast
 													#collision layer is just a bitmap represented in decimal for setting it (eg layers 1,2,3 = (int)7)... mask is the same
 													# this is still true even though i've commented this code out hehe
